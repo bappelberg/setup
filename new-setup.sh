@@ -109,6 +109,8 @@ sudo apt install docker.io -y
 echo "Installing htop for system monitoring"
 sudo apt install htop -y
 
+sudo apt install nginx -y
+
 # Ta bort onödiga paket och rensa systemet
 echo "Removing unnecessary packages and cleaning up"
 sudo apt autoremove -y
@@ -131,4 +133,5 @@ echo "Setup is done. Elapsed time: $elapsed_time seconds"
 echo "Verifying installations"
 git --version
 java -version
-sudo systemctl status jenkins
+echo "Check jenkins status: sudo systemctl status jenkins"
+echo "END OF PROGRAM"
