@@ -20,6 +20,19 @@ sudo apt install git -y
 echo "Setting up git name and email"
 git config --global user.name "bappelberg"
 git config --global user.email "benjamin.w.appelberg@gmail.com"
+# Installera Vim (eller en annan editor som du föredrar)
+echo "Installing Vim"
+sudo apt install vim -y
+echo "making vim git core editor"
+git config --global core.editor "vim"
+git config --global --get core.editor
+echo "
+# Add Git branch to prompt
+parse_git_branch() {
+    git branch 2>/dev/null | grep '*' | sed 's/* //'
+}
+
+export PS1='\u@\h:\w$(parse_git_branch)\$ '\n" >> ~/.bashrc
 
 # Installera OpenSSH-server
 echo "Installing OpenSSH-server"
@@ -98,12 +111,6 @@ sudo apt install python3 python3-pip -y
 echo "Installing Docker"
 sudo apt install docker.io -y
 
-# Installera Vim (eller en annan editor som du föredrar)
-echo "Installing Vim"
-sudo apt install vim -y
-echo "making vim git core editor"
-git config --global core.editor "vim"
-git config --global --get core.editor
 
 
 # Installera htop för systemövervakning
