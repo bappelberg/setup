@@ -101,6 +101,10 @@ sudo apt install docker.io -y
 # Installera Vim (eller en annan editor som du föredrar)
 echo "Installing Vim"
 sudo apt install vim -y
+echo "making vim git core editor"
+git config --global core.editor "vim"
+git config --global --get core.editor
+
 
 # Installera htop för systemövervakning
 echo "Installing htop for system monitoring"
