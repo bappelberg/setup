@@ -26,14 +26,6 @@ sudo apt install vim -y
 echo "making vim git core editor"
 git config --global core.editor "vim"
 git config --global --get core.editor
-echo "
-# Add Git branch to prompt
-parse_git_branch() {
-    git branch 2>/dev/null | grep '*' | sed 's/* //'
-}
-
-export PS1='\u@\h:\w$(parse_git_branch)\$ '" >> ~/.bashrc
-
 # Installera OpenSSH-server
 echo "Installing OpenSSH-server"
 sudo apt install openssh-server -y
