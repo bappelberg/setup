@@ -32,7 +32,7 @@ parse_git_branch() {
     git branch 2>/dev/null | grep '*' | sed 's/* //'
 }
 
-export PS1='\u@\h:\w$(parse_git_branch)\$ '\n" >> ~/.bashrc
+export PS1='\u@\h:\w$(parse_git_branch)\$ '" >> ~/.bashrc
 
 # Installera OpenSSH-server
 echo "Installing OpenSSH-server"
