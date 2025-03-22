@@ -66,7 +66,7 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
 sudo apt install jenkins -y
  
  
-sudo systemctl status jenkins
+# sudo systemctl status jenkins
  
 echo "Did jenkins start correctly?: sudo systemctl status jenkins"
 echo "Debug jenkin logs: sudo journalctl -u jenkins --no-pager -n 50"
